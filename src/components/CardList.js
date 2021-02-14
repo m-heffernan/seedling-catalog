@@ -1,15 +1,15 @@
 import React from "react";
 import Card from "./Card";
 
-const CardList = ({ robots }) => {
+const CardList = ({ seedlings }) => {
   return (
     <div>
-      {robots.map((user, i) => {
+      {seedlings.map((user, i) => {
         return (
           <Card
-            key={robots[i].id}
-            image={robots[i].image}
-            name={robots[i].name}
+            key={seedlings[i].id}
+            image={seedlings[i].image}
+            name={seedlings[i].name}
           />
         );
       })}

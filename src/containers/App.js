@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import CardList from "../components/CardList";
-import { robots } from "../robots";
+import { seedlings } from "../seedlings";
 import SearchBox from "../components/SearchBox";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      robots: robots,
+      seedlings: seedlings,
       searchfield: ""
     };
   }
@@ -17,8 +17,8 @@ class App extends Component {
   };
 
   render() {
-    const filteredRobots = this.state.robots.filter(robot => {
-      return robot.name
+    const filteredSeedlings = this.state.seedlings.filter(seedling => {
+      return seedling.name
         .toLowerCase()
         .includes(this.state.searchfield.toLowerCase());
     });
@@ -26,7 +26,7 @@ class App extends Component {
       <div className="tc">
         <h1>Seedling Catalog</h1>
         <SearchBox searchChange={this.onSearchChange} />
-        <CardList robots={filteredRobots} />
+        <CardList seedlings={filteredSeedlings} />
       </div>
     );
   }

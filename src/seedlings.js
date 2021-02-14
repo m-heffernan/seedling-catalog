@@ -1,4 +1,4 @@
-export const robots = [
+export const seedlings = [
   {
     id: 1,
     name: "Basil",
